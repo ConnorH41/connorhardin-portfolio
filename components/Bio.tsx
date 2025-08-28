@@ -43,20 +43,6 @@ export default function Bio() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
           </div>
           
-          {/* Floating Info Card */}
-          <div className="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 rounded-xl p-6 shadow-xl border border-slate-200 dark:border-slate-700">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-primary-600 mb-2">5+</div>
-              <div className="text-sm text-slate-600 dark:text-slate-400">Years Experience</div>
-            </div>
-          </div>
-          
-          <div className="absolute -top-6 -right-6 bg-primary-600 text-white rounded-xl p-6 shadow-xl">
-            <div className="text-center">
-              <div className="text-2xl font-bold mb-2">50+</div>
-              <div className="text-sm opacity-90">Projects Completed</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
