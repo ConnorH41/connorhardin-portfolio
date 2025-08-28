@@ -5,32 +5,56 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    font-size: 18px;
   }
-  
   body {
-    @apply antialiased;
+    @apply antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans;
+    font-size: 1rem;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold text-slate-900 dark:text-white;
+    letter-spacing: -0.01em;
+  }
+  h1 {
+    @apply text-5xl md:text-7xl mb-6 leading-tight;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl mb-4 leading-snug;
+  }
+  h3 {
+    @apply text-2xl mb-2;
+  }
+  p {
+    @apply text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-4;
+  }
+  a {
+    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200 underline-offset-2;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-7 rounded-lg transition-all duration-200 shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+    letter-spacing: 0.01em;
   }
-  
   .btn-secondary {
-    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 font-semibold py-3 px-6 rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 font-semibold py-3 px-7 rounded-lg transition-all duration-200 shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-200 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+    letter-spacing: 0.01em;
   }
-  
   .card {
-    @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-slate-200 dark:border-slate-700;
+    @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-7 border border-slate-200 dark:border-slate-700;
   }
-  
   .section-padding {
-    @apply py-16 px-4 sm:px-6 lg:px-8;
+    @apply py-20 px-4 sm:px-8 lg:px-16;
   }
-  
   .container-custom {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-6xl mx-auto;
   }
 }
 
@@ -38,12 +62,21 @@
   .text-gradient {
     @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
   }
-  
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
-  
   .animate-slide-up {
     animation: slideUp 0.5s ease-out;
   }
+  .hover-underline {
+    @apply hover:underline underline-offset-4 transition-all duration-150;
+  }
+  .animate-bounce-gentle {
+    animation: bounceGentle 1.8s infinite;
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
 }
