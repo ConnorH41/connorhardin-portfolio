@@ -10,15 +10,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="card group hover:scale-105 transition-all duration-300">
       {/* Project Image */}
-      <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-300"
-        />
-        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
-      </div>
+      {project.image && (
+        <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+        </div>
+      )}
 
       {/* Project Content */}
       <div className="flex-1">
@@ -57,16 +59,17 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Project Links */}
         <div className="flex gap-3">
-          <a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center px-4 py-2 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-800 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors duration-200 flex-1"
-          >
-            <Github className="h-4 w-4 mr-2" />
-            Code
-          </a>
-          
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center px-4 py-2 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-800 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors duration-200 flex-1"
+            >
+              <Github className="h-4 w-4 mr-2" />
+              Code
+            </a>
+          )}
           {project.liveUrl && (
             <a
               href={project.liveUrl}
@@ -75,7 +78,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 flex-1"
             >
               <ExternalLink className="h-4 w-4 mr-2" />
-              Demo
+              Link
             </a>
           )}
         </div>
