@@ -66,6 +66,29 @@ export const accomplishments: Accomplishment[] = [
     description: 'Recognized for exceptional academic performance at Roger Williams University.',
     link: 'https://www.capenews.net/falmouth/landmarks/falmouth-residents-named-to-deans-lists/article_31f22108-c8de-50b6-8fa0-72117acf4f17.html',
   },
+  {
+    id: '8',
+    title: 'Testout PC Pro Certificate',
+    description: 'Earned the Testout PC Pro certification demonstrating proficiency in computer hardware and software.',
+    date: '2024-01',
+    link: '/images/PCProCertificate.pdf', 
+    featured: false
+  },
+  {
+    id: '9',
+    title: 'CompTIA Network Certificate',
+    description: 'Earned the CompTIA Network certification demonstrating proficiency in networking concepts and practices.',
+    date: '2025-01',
+    link: '/images/NetworkCertificate.pdf',
+    featured: false
+  },
+    {
+    id: '10',
+    title: 'CompTIA Ethical Hacker Certificate',
+    description: 'Earned the CompTIA Ethical Hacker certification demonstrating proficiency in ethical hacking and network security.',
+    date: '2025-06',
+    featured: false
+  },
 ]
 
 
