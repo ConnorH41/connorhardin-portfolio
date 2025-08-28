@@ -1,6 +1,6 @@
 'use client'
 
-import { Github, Linkedin, Youtube, Mail, Download } from 'lucide-react'
+import { Github, Linkedin, Mail, Download } from 'lucide-react'
 
 const socialLinks = [
   {
@@ -16,13 +16,6 @@ const socialLinks = [
     icon: Linkedin,
     description: 'Connect with me professionally and view my experience',
     color: 'hover:bg-blue-600 hover:text-white'
-  },
-  {
-    name: 'YouTube',
-    href: 'https://youtube.com/@yourusername',
-    icon: Youtube,
-    description: 'Watch my tutorials and tech content',
-    color: 'hover:bg-red-600 hover:text-white'
   },
   {
     name: 'Email',
