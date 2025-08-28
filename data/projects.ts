@@ -22,7 +22,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'COMSC-210-NEXTJS Website',
     description: 'A NEXTJS version of the HTML website created for a fictional car company.',
-    techStack: ['Next.js', 'TensorFlow', 'React', 'FastAPI', 'Docker', 'Redis'],
+    techStack: ['Next.js', 'CSS'],
     githubUrl: 'https://github.com/ConnorHardin/COMSC-210-NEXTJS-Website',
     featured: false
   },
@@ -30,7 +30,7 @@ export const projects: Project[] = [
     id: '3',
     title: 'COMSC-225-Final Project',
     description: 'A data science project that analyzes Apple Health Data and Exercise CSV files to analyze strength progression and trends',
-    techStack: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Expo'],
+    techStack: ['Python', 'Pandas', 'NumPy', 'Matplotlib'],
     githubUrl: 'https://github.com/ConnorHardin/COMSC-225-FinalProject',
     featured: false
   },

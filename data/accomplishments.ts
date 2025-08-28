@@ -82,11 +82,18 @@ export const accomplishments: Accomplishment[] = [
     link: '/images/NetworkCertificate.pdf',
     featured: false
   },
-    {
+  {
     id: '10',
     title: 'CompTIA Ethical Hacker Certificate',
     description: 'Earned the CompTIA Ethical Hacker certification demonstrating proficiency in ethical hacking and network security.',
     date: '2025-06',
+    featured: false
+  },
+  {
+    id: '11',
+    title: 'OSHA10 Safety Certification',
+    description: 'Completed OSHA 10-hour safety training for construction industry standards and workplace safety.',
+    date: '2022-06',
     featured: false
   },
 ]
