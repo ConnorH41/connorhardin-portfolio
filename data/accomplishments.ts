@@ -5,6 +5,7 @@ export interface Accomplishment {
   date?: string
   image?: string
   link?: string
+  featured?: boolean
 }
 
 export const accomplishments: Accomplishment[] = [
@@ -14,7 +15,8 @@ export const accomplishments: Accomplishment[] = [
     description: 'Field for 5th Annual U18 National Championship is Set.',
     date: '2023-02',
     image: '/images/CurlingNationals2023.jpeg', 
-    link: 'https://www.usacurling.org/press-releases/curling-5thannual-u18'
+    link: 'https://www.usacurling.org/press-releases/curling-5thannual-u18',
+    featured: true
   },
   {
     id: '2',
@@ -46,7 +48,8 @@ export const accomplishments: Accomplishment[] = [
     description: 'Attended the ASC International Conference 2025 in Calgary, Alberta to present a poster on TradeBind.',
     date: '2025-06',
     link: 'https://ascweb.org/about/2025-asc-conference/',
-    image: '/images/ASC2025.jpeg'
+    image: '/images/ASC2025.jpeg',
+    featured: true
   },
   {
     id: '6',
@@ -54,7 +57,8 @@ export const accomplishments: Accomplishment[] = [
     description: 'Developed TradeBind, a platform for union workers, union admins, and contractors to modernize the construction industry.',
     date: '2025-02',
     image: '/images/TradeBind.png',
-    link: 'https://www.tradebind.com/'
+    link: 'https://www.tradebind.com/',
+    featured: false
   },
   {
     id: '7',

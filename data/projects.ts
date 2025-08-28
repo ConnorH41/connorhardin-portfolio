@@ -16,7 +16,7 @@ export const projects: Project[] = [
     description: 'A basic HTML website for a fictional car company.',
     techStack: ['HTML', 'CSS'],
     githubUrl: 'https://github.com/ConnorHardin/CH-lab3-html-website',
-    featured: true
+    featured: false
   },
   {
     id: '2',
@@ -24,7 +24,7 @@ export const projects: Project[] = [
     description: 'A NEXTJS version of the HTML website created for a fictional car company.',
     techStack: ['Next.js', 'TensorFlow', 'React', 'FastAPI', 'Docker', 'Redis'],
     githubUrl: 'https://github.com/ConnorHardin/COMSC-210-NEXTJS-Website',
-    featured: true
+    featured: false
   },
   {
     id: '3',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     description: 'A data science project that analyzes Apple Health Data and Exercise CSV files to analyze strength progression and trends',
     techStack: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Expo'],
     githubUrl: 'https://github.com/ConnorHardin/COMSC-225-FinalProject',
-    featured: true
+    featured: false
   },
     {
     id: '6',
@@ -41,7 +41,7 @@ export const projects: Project[] = [
     image: '/images/TradeBind.png',
     techStack: ['React', 'Node.js', 'Javascript', 'SQL', 'NGINX'],
     liveUrl: 'https://www.tradebind.com/',
-    featured: false
+    featured: true
   }
 ]
 
