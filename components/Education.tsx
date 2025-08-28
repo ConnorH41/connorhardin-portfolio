@@ -2,36 +2,26 @@ import { GraduationCap, Calendar, MapPin, Award } from 'lucide-react'
 
 const education = [
   {
-    degree: 'Master of Science in Computer Science',
-    school: 'University of Technology',
-    location: 'Boston, MA',
-    year: '2020 - 2022',
-    gpa: '3.9/4.0',
-    honors: 'Graduated with Distinction',
-    thesis: 'Advanced Machine Learning Algorithms for Natural Language Processing',
-    relevantCourses: [
-      'Advanced Algorithms',
-      'Machine Learning',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Distributed Systems'
-    ]
+    degree: 'Bachelor of Science in Computer Science – ABET Accredited',
+    school: 'Roger Williams University',
+    location: 'Bristol, RI',
+    year: '2022 - 2026',
+    gpa: '3.82/4.0',
+    specialization: 'Specialization: Cybersecurity',
+    minors: 'Minors: Cybersecurity, Math',
+    honors: 'Dean’s List: Fall 2022 - Spring 2025',
   },
   {
-    degree: 'Bachelor of Science in Computer Science',
-    school: 'University of Technology',
-    location: 'Boston, MA',
-    year: '2016 - 2020',
+    degree: 'High School Diploma',
+    school: 'Falmouth High School',
+    location: 'Falmouth, MA',
+    year: '2018 - 2022',
     gpa: '3.8/4.0',
-    honors: 'Magna Cum Laude',
-    thesis: 'Efficient Algorithms for Graph Processing',
-    relevantCourses: [
-      'Data Structures & Algorithms',
-      'Computer Organization',
-      'Software Engineering',
-      'Database Systems',
-      'Operating Systems'
-    ]
+    honors: [
+      'Honor Roll: Fall 2018 - Spring 2022',
+      'Captain of Soccer Team: Fall 2021',
+      'Soccer Sportsmanship Award: Fall 2018'
+    ],
   }
 ]
 
@@ -63,6 +53,16 @@ export default function Education() {
                   <Calendar className="h-4 w-4 mr-2" />
                   <span>{edu.year}</span>
                 </div>
+                {edu.specialization && (
+                  <div className="text-slate-600 dark:text-slate-400 mb-1 font-medium">
+                    {edu.specialization}
+                  </div>
+                )}
+                {edu.minors && (
+                  <div className="text-slate-600 dark:text-slate-400 mb-1 font-medium">
+                    {edu.minors}
+                  </div>
+                )}
               </div>
               
               <div className="lg:text-right mt-4 lg:mt-0">
@@ -77,20 +77,20 @@ export default function Education() {
             
             <div className="grid lg:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3 flex items-center">
+                <h4 className="flex items-center text-slate-600 dark:text-slate-400 mb-2">
                   <Award className="h-4 w-4 text-primary-600 mr-2" />
                   Honors & Achievements
                 </h4>
-                <p className="text-slate-600 dark:text-slate-400 mb-3">
-                  {edu.honors}
-                </p>
+                {Array.isArray(edu.honors) ? (
+                  <div className="font-medium text-base text-slate-600 dark:text-slate-400 mb-3 space-y-1">
+                    {edu.honors.map((line, i) => (
+                      <div key={i}>{line}</div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="font-medium text-base text-slate-600 dark:text-slate-400 mb-3">{edu.honors}</p>
+                )}
                 
-                <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">
-                  Thesis
-                </h4>
-                <p className="text-slate-600 dark:text-slate-400">
-                  {edu.thesis}
-                </p>
               </div>
               
               {/* Relevant Coursework section removed, now its own section */}
