@@ -35,7 +35,7 @@ export default function Bio() {
         <div className="relative">
           <div className="relative h-96 rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=800&fit=crop"
+              src="/images/Me.png"
               alt="Connor Hardin"
               fill
               className="object-cover"
