@@ -1,12 +1,4 @@
-import { skillCategories, getSkillsByCategory } from '@/data/skills'
-import { Code, Zap, Wrench, Users } from 'lucide-react'
-
-const categoryIcons = {
-  languages: Code,
-  frameworks: Zap,
-  tools: Wrench,
-  'soft-skills': Users
-}
+import { skills } from '@/data/skills'
 
 export default function SkillsOverview() {
   return (
@@ -22,42 +14,15 @@ export default function SkillsOverview() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {skillCategories.map((category) => {
-            const Icon = categoryIcons[category.key as keyof typeof categoryIcons]
-            const skills = getSkillsByCategory(category.key as any)
-            const expertSkills = skills.filter(skill => skill.level === 'expert').length
-            const advancedSkills = skills.filter(skill => skill.level === 'advanced').length
-
-            return (
-              <div key={category.key} className="card text-center group hover:scale-105 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                  <div className="p-3 bg-primary-100 dark:bg-primary-900 rounded-full">
-                    <Icon className="h-8 w-8 text-primary-600 dark:text-primary-400" />
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">
-                  {category.label}
-                </h3>
-                
-                <p className="text-slate-600 dark:text-slate-400 mb-4">
-                  {skills.length} skills mastered
-                </p>
-                
-                <div className="space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Expert</span>
-                    <span className="font-semibold text-primary-600">{expertSkills}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span>Advanced</span>
-                    <span className="font-semibold text-primary-600">{advancedSkills}</span>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
+        <div className="flex flex-wrap gap-3 justify-center">
+          {skills.map((skill) => (
+            <span
+              key={skill}
+              className="px-4 py-2 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-100 text-sm font-medium shadow-sm hover:bg-primary-200 dark:hover:bg-primary-800 transition-colors"
+            >
+              {skill}
+            </span>
+          ))}
         </div>
 
         <div className="text-center mt-12">
