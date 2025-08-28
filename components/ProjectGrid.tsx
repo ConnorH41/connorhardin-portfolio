@@ -4,38 +4,26 @@ import { useState } from 'react'
 import { projects, Project } from '@/data/projects'
 import ProjectCard from './ProjectCard'
 
-const categories = [
-  { key: 'all', label: 'All Projects' },
-  { key: 'web', label: 'Web Development' },
-  { key: 'mobile', label: 'Mobile Apps' },
-  { key: 'research', label: 'Research & AI' },
-  { key: 'other', label: 'Other' }
-]
+
 
 export default function ProjectGrid() {
-  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [search, setSearch] = useState('')
 
-  const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory)
+  const filteredProjects = projects.filter(project =>
+    project.title.toLowerCase().includes(search.toLowerCase())
+  )
 
   return (
     <div>
-      {/* Category Filter */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
-        {categories.map((category) => (
-          <button
-            key={category.key}
-            onClick={() => setSelectedCategory(category.key)}
-            className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
-              selectedCategory === category.key
-                ? 'bg-primary-600 text-white shadow-lg'
-                : 'bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-600'
-            }`}
-          >
-            {category.label}
-          </button>
-        ))}
+      {/* Search Bar */}
+      <div className="flex justify-center mb-12">
+        <input
+          type="text"
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          placeholder="Search projects by title..."
+          className="w-full max-w-md px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+        />
       </div>
 
       {/* Projects Grid */}
@@ -48,7 +36,7 @@ export default function ProjectGrid() {
       ) : (
         <div className="text-center py-16">
           <p className="text-lg text-slate-600 dark:text-slate-400">
-            No projects found in this category.
+            No projects found.
           </p>
         </div>
       )}
