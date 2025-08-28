@@ -11,9 +11,18 @@ import Image from 'next/image'
 export default function AccomplishmentsGrid() {
   const [search, setSearch] = useState('')
 
-  const filteredAccomplishments = accomplishments.filter(acc =>
+
+  // Sort accomplishments by date descending, missing dates last
+  const sortedAccomplishments = [...accomplishments].sort((a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+
+  const filteredAccomplishments = sortedAccomplishments.filter(acc =>
     acc.title.toLowerCase().includes(search.toLowerCase())
-  )
+  );
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)

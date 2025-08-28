@@ -11,7 +11,7 @@ export const accomplishments: Accomplishment[] = [
   {
     id: '1',
     title: 'U18 Curling Nationals - 2023',
-    description: 'FIELD FOR 5TH ANNUAL U18 NATIONAL CHAMPIONSHIP IS SET.',
+    description: 'Field for 5th Annual U18 National Championship is Set.',
     date: '2023-02',
     image: '/images/CurlingNationals2023.jpeg', 
     link: 'https://www.usacurling.org/press-releases/curling-5thannual-u18'
@@ -19,16 +19,16 @@ export const accomplishments: Accomplishment[] = [
   {
     id: '2',
     title: 'U21 Curling Nationals - 2021',
-    description: 'CAPE CURLERS HANG TOUGH WITH ONE WINNING A TITLE AT US JUNIOR NATIONALS.',
+    description: 'Cape Curlers Hang Tough With One Winning A Title At US Junior Nationals.',
     date: '2021-09',
     link: 'https://www.capenews.net/falmouth/sports/cape-curlers-hang-tough-with-one-winning-a-title-at-us-junior-nationals/article_6792f9b4-c636-5b0e-af88-49ee251a6320.html',
-    image: '/images/CurlingNationals2021.jpeg'
+    image: '/images/CurlingNationals2021.jpg'
   },
   {
     id: '3',
     title: 'U21 Curling Nationals - 2022',
-    description: 'STEVENS POINT TO HOST 2022 JUNIOR NATIONAL CHAMPIONSHIPS.',
-    date: '2023-05',
+    description: 'Stevens Point to Host 2022 Junior National Championships.',
+    date: '2022-05',
     image: '/images/CurlingNationals2022.jpeg',
     link: 'https://www.usacurling.org/press-releases/stevens-point-to-host-2022-junior-national-championships'
   },
