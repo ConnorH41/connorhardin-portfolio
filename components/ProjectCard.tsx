@@ -8,35 +8,35 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="card group hover:scale-105 transition-all duration-300">
+    <div className="card group hover:scale-[1.03] transition-transform duration-300 animate-fade-in">
       {/* Project Image */}
       {project.image && (
-        <div className="relative h-48 mb-4 rounded-lg overflow-hidden">
+        <div className="relative h-48 mb-4 rounded-2xl overflow-hidden shadow-soft">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-300"
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+          <div className="absolute inset-0 bg-dark/10 group-hover:bg-dark/5 transition-colors duration-300" />
         </div>
       )}
 
       {/* Project Content */}
       <div className="flex-1">
-        <h3 className="text-xl font-semibold mb-2 text-slate-900 dark:text-slate-100">
+        <h3 className="text-xl font-bold mb-2 text-dark">
           {project.title}
         </h3>
         
-        <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">
+        <p className="text-dark/70 mb-4 line-clamp-3">
           {project.description}
         </p>
 
         {/* Tech Stack */}
         <div className="mb-4">
           <div className="flex items-center mb-2">
-            <Tag className="h-4 w-4 text-primary-600 mr-2" />
-            <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
+            <Tag className="h-4 w-4 text-primary mr-2" />
+            <span className="text-sm font-medium text-dark/80">
               Tech Stack
             </span>
           </div>
@@ -44,13 +44,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 text-xs bg-primary-100 dark:bg-primary-900 text-primary-800 dark:text-primary-200 rounded-full"
+                className="px-2 py-1 text-xs bg-primary/10 text-primary font-semibold rounded-full shadow-soft"
               >
                 {tech}
               </span>
             ))}
             {project.techStack.length > 4 && (
-              <span className="px-2 py-1 text-xs bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400 rounded-full">
+              <span className="px-2 py-1 text-xs bg-dark/5 text-dark/60 rounded-full">
                 +{project.techStack.length - 4} more
               </span>
             )}
@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-800 rounded-lg hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors duration-200 flex-1"
+              className="flex items-center justify-center px-4 py-2 bg-dark text-base text-base font-semibold text-base-DEFAULT rounded-2xl hover:bg-primary/90 hover:text-base transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant"
             >
               <Github className="h-4 w-4 mr-2" />
               Code
@@ -75,7 +75,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-200 flex-1"
+              className="flex items-center justify-center px-4 py-2 bg-primary text-base font-semibold text-base rounded-2xl hover:bg-secondary transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant"
             >
               <ExternalLink className="h-4 w-4 mr-2" />
               Link

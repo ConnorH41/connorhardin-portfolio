@@ -8,17 +8,19 @@
     font-size: 18px;
   }
   body {
-    @apply antialiased bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans;
+    @apply antialiased bg-base text-dark font-body;
+    @apply dark:bg-base-dark dark:text-dark-dark;
     font-size: 1rem;
     line-height: 1.7;
     letter-spacing: 0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-bold text-slate-900 dark:text-white;
+    @apply font-display font-bold text-dark;
+    @apply dark:text-dark-dark;
     letter-spacing: -0.01em;
   }
   h1 {
-    @apply text-5xl md:text-7xl mb-6 leading-tight;
+    @apply text-5xl md:text-7xl mb-6 leading-tight drop-shadow-sm;
   }
   h2 {
     @apply text-3xl md:text-4xl mb-4 leading-snug;
@@ -27,10 +29,12 @@
     @apply text-2xl mb-2;
   }
   p {
-    @apply text-lg md:text-xl text-slate-700 dark:text-slate-300 mb-4;
+    @apply text-lg md:text-xl text-dark/80 mb-4 font-body;
+    @apply dark:text-dark-dark/80;
   }
   a {
-    @apply text-primary-600 hover:text-primary-700 transition-colors duration-200 underline-offset-2;
+    @apply text-primary hover:text-secondary transition-colors duration-200 underline-offset-2 font-semibold;
+    @apply dark:text-primary-dark dark:hover:text-secondary-dark;
     text-decoration: none;
   }
   a:hover {
@@ -40,15 +44,18 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-7 rounded-lg transition-all duration-200 shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+    @apply bg-primary hover:bg-secondary text-base font-semibold py-3 px-7 rounded-2xl transition-all duration-200 shadow-soft hover:shadow-elegant focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-base;
+    @apply dark:bg-primary-dark dark:hover:bg-secondary-dark dark:text-base-dark;
     letter-spacing: 0.01em;
   }
   .btn-secondary {
-    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-700 dark:hover:bg-slate-600 text-slate-800 dark:text-slate-200 font-semibold py-3 px-7 rounded-lg transition-all duration-200 shadow-sm hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-200 focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-slate-900;
+    @apply bg-base hover:bg-primary/10 text-dark font-semibold py-3 px-7 rounded-2xl transition-all duration-200 shadow-soft hover:shadow-elegant focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 focus:ring-offset-base;
+    @apply dark:bg-base-dark dark:hover:bg-primary-dark/10 dark:text-dark-dark;
     letter-spacing: 0.01em;
   }
   .card {
-    @apply bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-7 border border-slate-200 dark:border-slate-700;
+    @apply bg-base rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 p-7 border border-secondary/10;
+    @apply dark:bg-base-dark dark:border-secondary-dark/20;
   }
   .section-padding {
     @apply py-20 px-4 sm:px-8 lg:px-16;
@@ -60,13 +67,13 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
   .animate-fade-in {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
   }
   .animate-slide-up {
-    animation: slideUp 0.5s ease-out;
+    animation: slideUp 0.7s cubic-bezier(0.4,0,0.2,1);
   }
   .hover-underline {
     @apply hover:underline underline-offset-4 transition-all duration-150;

@@ -19,11 +19,11 @@ export default function Header() {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <header className="bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50">
+  <header className="bg-base/90 dark:bg-base-dark/95 backdrop-blur-md border-b border-secondary/20 dark:border-secondary-dark/30 sticky top-0 z-50 shadow-soft animate-fade-in">
       <nav className="container-custom px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-gradient">
+          <Link href="/" className="text-2xl font-extrabold text-gradient tracking-tight dark:text-dark-dark">
             Connor Hardin
           </Link>
 
@@ -33,7 +33,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                className="text-dark/80 dark:text-dark-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200 font-medium rounded-xl px-3 py-1.5 hover:bg-primary/10 dark:hover:bg-primary-dark/10 focus:outline-none focus:ring-2 focus:ring-primary/30 dark:focus:ring-primary-dark/30 focus:ring-offset-2 focus:ring-offset-base dark:focus:ring-offset-base-dark"
               >
                 {item.name}
               </Link>
@@ -44,25 +44,25 @@ export default function Header() {
           <div className="flex items-center space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
+              className="p-2 rounded-xl bg-base hover:bg-primary/10 dark:bg-base-dark dark:hover:bg-primary-dark/10 transition-colors duration-200 shadow-soft focus:outline-none focus:ring-2 focus:ring-primary/30 dark:focus:ring-primary-dark/30 focus:ring-offset-2 focus:ring-offset-base dark:focus:ring-offset-base-dark"
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
-                <Moon className="h-5 w-5 text-slate-700" />
+                <Moon className="h-5 w-5 text-dark/80" />
               ) : (
-                <Sun className="h-5 w-5 text-slate-300" />
+                <Sun className="h-5 w-5 text-primary-dark" />
               )}
             </button>
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors duration-200"
+              className="md:hidden p-2 rounded-xl bg-base hover:bg-primary/10 dark:bg-base-dark dark:hover:bg-primary-dark/10 transition-colors duration-200 shadow-soft focus:outline-none focus:ring-2 focus:ring-primary/30 dark:focus:ring-primary-dark/30 focus:ring-offset-2 focus:ring-offset-base dark:focus:ring-offset-base-dark"
               aria-label="Toggle mobile menu"
             >
               {mobileMenuOpen ? (
-                <X className="h-5 w-5 text-slate-700 dark:text-slate-300" />
+                <X className="h-5 w-5 text-dark/80 dark:text-dark-dark/80" />
               ) : (
-                <Menu className="h-5 w-5 text-slate-700 dark:text-slate-300" />
+                <Menu className="h-5 w-5 text-dark/80 dark:text-dark-dark/80" />
               )}
             </button>
           </div>
@@ -70,13 +70,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-slate-200 dark:border-slate-700">
+          <div className="md:hidden py-4 border-t border-secondary/20 dark:border-secondary-dark/30 animate-fade-in bg-base dark:bg-base-dark">
             <div className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-slate-700 dark:text-slate-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200 px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+                  className="text-dark/80 dark:text-dark-dark/80 hover:text-primary dark:hover:text-primary-dark transition-colors duration-200 px-4 py-2 rounded-xl hover:bg-primary/10 dark:hover:bg-primary-dark/10 focus:outline-none focus:ring-2 focus:ring-primary/30 dark:focus:ring-primary-dark/30 focus:ring-offset-2 focus:ring-offset-base dark:focus:ring-offset-base-dark"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

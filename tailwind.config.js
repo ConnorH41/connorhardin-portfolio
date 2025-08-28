@@ -9,34 +9,43 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#eff6ff',
-          100: '#dbeafe',
-          200: '#bfdbfe',
-          300: '#93c5fd',
-          400: '#60a5fa',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8',
-          800: '#1e40af',
-          900: '#1e3a8a',
+        base: {
+          DEFAULT: '#EEEEEE',
+          dark: '#1D1616',
         },
-        slate: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-        }
+        primary: {
+          DEFAULT: '#8E1616',
+          dark: '#D84040',
+        },
+        secondary: {
+          DEFAULT: '#D84040',
+          dark: '#8E1616',
+        },
+        dark: {
+          DEFAULT: '#1D1616',
+          dark: '#EEEEEE',
+        },
+        accent: {
+          DEFAULT: '#D84040',
+          dark: '#8E1616',
+        },
+      },
+      borderRadius: {
+        'xl': '1.25rem',
+        '2xl': '1.5rem',
+        '3xl': '2rem',
+      },
+      boxShadow: {
+        'soft': '0 2px 12px 0 rgba(29, 22, 22, 0.08)',
+        'elegant': '0 4px 32px 0 rgba(29, 22, 22, 0.12)',
+      },
+      fontFamily: {
+        display: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
+        'fade-in': 'fadeIn 0.7s cubic-bezier(0.4,0,0.2,1)',
+        'slide-up': 'slideUp 0.7s cubic-bezier(0.4,0,0.2,1)',
         'bounce-gentle': 'bounceGentle 2s infinite',
       },
       keyframes: {
@@ -45,14 +54,14 @@ module.exports = {
           '100%': { opacity: '1' },
         },
         slideUp: {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '0%': { transform: 'translateY(24px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         bounceGentle: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
         }
-      }
+      },
     },
   },
   plugins: [],
