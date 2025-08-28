@@ -11,23 +11,19 @@ export default function Bio() {
           
           <div className="space-y-4 text-lg text-slate-600 dark:text-slate-400">
             <p>
-              I'm Connor Hardin, a passionate software developer and researcher with a deep interest 
-              in creating innovative solutions that solve real-world problems. My journey in technology 
-              began with a curiosity about how computers work and has evolved into a career building 
-              scalable applications and conducting cutting-edge research.
+              My name is Connor Hardin, and I’m from Falmouth, MA. I’m currently pursuing a degree in Computer Science at 
+              Roger Williams University, with minors in Cybersecurity and Mathematics. My passion for technology started at 
+              a young age—from learning how to type and write code in class, to troubleshooting hardware problems—and has grown 
+              into creating my own projects and continuously expanding my knowledge.
             </p>
             
             <p>
-              With a Master's degree in Computer Science and several years of industry experience, 
-              I've had the opportunity to work on diverse projects ranging from web applications to 
-              machine learning systems. I believe in the power of technology to make a positive impact 
-              and am always excited to take on new challenges.
-            </p>
-            
-            <p>
-              When I'm not coding or researching, you can find me contributing to open source projects, 
-              mentoring aspiring developers, or exploring new technologies. I'm a firm believer in 
-              continuous learning and collaboration within the tech community.
+             When I’m not coding or researching, I enjoy fishing, golfing, playing video games, 
+             and working on personal projects. These hobbies give me balance and perspective—fishing 
+             and golfing help me stay patient and focused, while gaming keeps me curious about design, 
+             problem-solving, and technology. Beyond hobbies, I’m always eager to take on new challenges, 
+             solve interesting problems, and explore fresh ideas that push me to grow both personally and 
+             professionally.
             </p>
           </div>
         </div>
