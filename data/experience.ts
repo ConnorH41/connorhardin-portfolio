@@ -13,6 +13,22 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    id: 'rwudev',
+    title: 'Software Developer',
+    company: 'Roger Williams University',
+    location: 'Bristol, RI',
+    startDate: '2024-11',
+    endDate: '2025-07',
+    current: false,
+    description: [
+      'Developed a full-stack hiring platform (React + TypeScript, Node.js, MySQL, NGINX) to modernize how union construction workers connect with job opportunities.',
+      'Owned system architecture decisions, prioritizing speed, modularity, and scalability.',
+      'Designed role-based dashboards for contractors, union admins, and workers, streamlining job postings, certification tracking, workforce management, and analytics.'
+    ],
+    technologies: ['React', 'TypeScript', 'Node.js', 'MySQL', 'NGINX', 'Full-Stack'],
+    type: 'work'
+  },
+  {
     id: '1',
     title: 'IS Intern',
     company: 'Associates of Cape Cod',

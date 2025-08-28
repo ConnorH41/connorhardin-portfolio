@@ -7,13 +7,21 @@ export default function ExperienceTimeline() {
     return date.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
   }
 
+  // Sort experiences by startDate descending
+  const sortedExperiences = [...experiences].sort((a, b) => {
+    if (!a.startDate && !b.startDate) return 0;
+    if (!a.startDate) return 1;
+    if (!b.startDate) return -1;
+    return new Date(b.startDate).getTime() - new Date(a.startDate).getTime();
+  });
+
   return (
     <div className="relative">
       {/* Timeline Line */}
       <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700"></div>
       
       <div className="space-y-12">
-        {experiences.map((experience, index) => (
+        {sortedExperiences.map((experience, index) => (
           <div key={experience.id} className="relative">
             {/* Timeline Dot */}
             <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-white dark:border-slate-800 ${
