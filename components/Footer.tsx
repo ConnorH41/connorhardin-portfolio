@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import { Github, Linkedin, Youtube, Mail } from 'lucide-react'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
 const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/yourusername', icon: Github },
   { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: Linkedin },
-  { name: 'YouTube', href: 'https://youtube.com/@yourusername', icon: Youtube },
   { name: 'Email', href: 'mailto:your.email@example.com', icon: Mail },
 ]
 
