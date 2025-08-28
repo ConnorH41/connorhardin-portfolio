@@ -93,21 +93,7 @@ export default function Education() {
                 </p>
               </div>
               
-              <div>
-                <h4 className="font-semibold text-slate-900 dark:text-slate-100 mb-3">
-                  Relevant Coursework
-                </h4>
-                <div className="grid grid-cols-1 gap-2">
-                  {edu.relevantCourses.map((course, idx) => (
-                    <div key={idx} className="flex items-center">
-                      <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
-                      <span className="text-slate-600 dark:text-slate-400 text-sm">
-                        {course}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Relevant Coursework section removed, now its own section */}
             </div>
           </div>
         ))}

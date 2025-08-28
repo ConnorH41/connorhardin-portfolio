@@ -1,6 +1,7 @@
 import Bio from '@/components/Bio'
 import Skills from '@/components/Skills'
 import Education from '@/components/Education'
+import Courses from '@/components/Courses'
 
 export const metadata = {
   title: 'About - Connor Hardin',
@@ -18,6 +19,7 @@ export default function About() {
           <Bio />
           <Skills />
           <Education />
+          <Courses />
         </div>
       </div>
     </div>
