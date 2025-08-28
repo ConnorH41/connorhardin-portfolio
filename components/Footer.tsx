@@ -2,9 +2,9 @@ import Link from 'next/link'
 import { Github, Linkedin, Mail } from 'lucide-react'
 
 const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/yourusername', icon: Github },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: Linkedin },
-  { name: 'Email', href: 'mailto:your.email@example.com', icon: Mail },
+  { name: 'GitHub', href: 'https://github.com/ConnorHardin', icon: Github },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/connor-hardin/', icon: Linkedin },
+  { name: 'Email', href: 'mailto:chardin993@g.rwu.edu', icon: Mail },
 ]
 
 export default function Footer() {
@@ -18,33 +18,6 @@ export default function Footer() {
             <p className="text-slate-600 dark:text-slate-400">
               Software developer and researcher passionate about creating innovative solutions.
             </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/about" className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="/experience" className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-                  Experience
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-slate-600 dark:text-slate-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
-                  Contact
-                </Link>
-              </li>
-            </ul>
           </div>
 
           {/* Social Links */}

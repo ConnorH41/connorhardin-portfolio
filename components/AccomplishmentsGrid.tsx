@@ -61,10 +61,12 @@ export default function AccomplishmentsGrid() {
                     {accomplishment.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-slate-500 dark:text-slate-400">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      {formatDate(accomplishment.date)}
-                    </div>
+                    {accomplishment.date && (
+                      <div className="flex items-center text-sm text-slate-500 dark:text-slate-400">
+                        <Calendar className="h-4 w-4 mr-2" />
+                        {formatDate(accomplishment.date)}
+                      </div>
+                    )}
                     {accomplishment.link && (
                       <a
                         href={accomplishment.link}

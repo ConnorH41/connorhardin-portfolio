@@ -2,9 +2,7 @@ export interface Accomplishment {
   id: string
   title: string
   description: string
-  date: string
-  type: 'degree' | 'certification' | 'award' | 'publication' | 'research' | 'other'
-  category: 'academic' | 'professional' | 'research' | 'personal'
+  date?: string
   image?: string
   link?: string
 }
@@ -12,103 +10,58 @@ export interface Accomplishment {
 export const accomplishments: Accomplishment[] = [
   {
     id: '1',
-    title: 'Master of Science in Computer Science',
-    description: 'Graduated with distinction from University of Technology. Specialized in Machine Learning and Artificial Intelligence.',
-    date: '2022-05',
-    type: 'degree',
-    category: 'academic',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'
+    title: 'U18 Curling Nationals - 2023',
+    description: 'FIELD FOR 5TH ANNUAL U18 NATIONAL CHAMPIONSHIP IS SET.',
+    date: '2023-02',
+    image: '/images/CurlingNationals2023.jpeg', 
+    link: 'https://www.usacurling.org/press-releases/curling-5thannual-u18'
   },
   {
     id: '2',
-    title: 'Best Paper Award - ICML 2022',
-    description: 'Received best paper award for research on "Novel Approaches to Transformer Architecture Optimization" at International Conference on Machine Learning.',
-    date: '2022-07',
-    type: 'award',
-    category: 'research',
-    link: 'https://icml.cc/2022/'
+    title: 'U21 Curling Nationals - 2021',
+    description: 'CAPE CURLERS HANG TOUGH WITH ONE WINNING A TITLE AT US JUNIOR NATIONALS.',
+    date: '2021-09',
+    link: 'https://www.capenews.net/falmouth/sports/cape-curlers-hang-tough-with-one-winning-a-title-at-us-junior-nationals/article_6792f9b4-c636-5b0e-af88-49ee251a6320.html',
+    image: '/images/CurlingNationals2021.jpeg'
   },
   {
     id: '3',
-    title: 'AWS Solutions Architect Associate',
-    description: 'Certified AWS Solutions Architect with expertise in designing scalable, reliable, and cost-effective cloud solutions.',
-    date: '2023-03',
-    type: 'certification',
-    category: 'professional',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=300&fit=crop'
+    title: 'U21 Curling Nationals - 2022',
+    description: 'STEVENS POINT TO HOST 2022 JUNIOR NATIONAL CHAMPIONSHIPS.',
+    date: '2023-05',
+    image: '/images/CurlingNationals2022.jpeg',
+    link: 'https://www.usacurling.org/press-releases/stevens-point-to-host-2022-junior-national-championships'
   },
   {
     id: '4',
-    title: 'Research Publication in Nature',
-    description: 'Co-authored paper on "Advances in Natural Language Processing" published in Nature journal.',
-    date: '2022-11',
-    type: 'publication',
-    category: 'research',
-    link: 'https://nature.com'
+    title: 'Falmouth Clippers Soccer Publication',
+    description: 'Falmouth Boys Score First Win, And A Tie.',
+    date: '2021-11',
+    link: 'https://www.capenews.net/falmouth/sports/falmouth-boys-score-first-win-and-a-tie/article_69ae4c19-85eb-5c76-a73c-17829a09ed90.html',
+    image: '/images/FalmouthSoccer.jpg'
   },
   {
     id: '5',
-    title: 'Outstanding Graduate Student Award',
-    description: 'Recognized for exceptional academic performance, research contributions, and leadership in the computer science department.',
-    date: '2022-04',
-    type: 'award',
-    category: 'academic'
+    title: 'Attended ASC International Conference 2025',
+    description: 'Attended the ASC International Conference 2025 in Calgary, Alberta to present a poster on TradeBind.',
+    date: '2025-06',
+    link: 'https://ascweb.org/about/2025-asc-conference/',
+    image: '/images/ASC2025.jpeg'
   },
   {
     id: '6',
-    title: 'Google Cloud Professional Developer',
-    description: 'Certified Google Cloud Professional Developer demonstrating expertise in building and deploying applications on Google Cloud Platform.',
-    date: '2023-01',
-    type: 'certification',
-    category: 'professional',
-    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop'
+    title: 'Created TradeBind',
+    description: 'Developed TradeBind, a platform for union workers, union admins, and contractors to modernize the construction industry.',
+    date: '2025-02',
+    image: '/images/TradeBind.png',
+    link: 'https://www.tradebind.com/'
   },
   {
     id: '7',
-    title: 'Open Source Contribution Award',
-    description: 'Recognized by the open source community for significant contributions to popular projects and mentoring new contributors.',
-    date: '2023-06',
-    type: 'award',
-    category: 'personal'
-  },
-  {
-    id: '8',
-    title: 'Bachelor of Science in Computer Science',
-    description: 'Graduated magna cum laude with honors. Completed thesis on "Efficient Algorithms for Graph Processing".',
-    date: '2020-05',
-    type: 'degree',
-    category: 'academic',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'
-  },
-  {
-    id: '9',
-    title: 'Conference Presentation - NeurIPS 2021',
-    description: 'Presented research findings on "Deep Learning for Computer Vision" at the prestigious Neural Information Processing Systems conference.',
-    date: '2021-12',
-    type: 'research',
-    category: 'research',
-    link: 'https://neurips.cc/2021/'
-  },
-  {
-    id: '10',
     title: 'Dean\'s List Recognition',
-    description: 'Consistently maintained academic excellence, earning Dean\'s List recognition for all semesters.',
-    date: '2018-2022',
-    type: 'award',
-    category: 'academic'
-  }
+    description: 'Recognized for exceptional academic performance at Roger Williams University.',
+    link: 'https://www.capenews.net/falmouth/landmarks/falmouth-residents-named-to-deans-lists/article_31f22108-c8de-50b6-8fa0-72117acf4f17.html',
+  },
 ]
 
-export const getAccomplishmentsByType = (type: Accomplishment['type']) => {
-  return accomplishments.filter(acc => acc.type === type)
-}
 
-export const getAccomplishmentsByCategory = (category: Accomplishment['category']) => {
-  return accomplishments.filter(acc => acc.category === category)
-}
-
-export const getRecentAccomplishments = (limit: number = 5) => {
-  return accomplishments
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, limit)
-}
