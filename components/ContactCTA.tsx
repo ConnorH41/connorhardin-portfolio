@@ -20,10 +20,6 @@ export default function ContactCTA() {
             Get In Touch
             <ArrowRight className="h-5 w-5 ml-2" />
           </Link>
-
-          <Link href="/projects" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-8 rounded-lg transition-all duration-200 shadow-sm hover:shadow-lg min-w-[180px] text-lg">
-            View My Work
-          </Link>
         </div>
       </div>
     </section>
