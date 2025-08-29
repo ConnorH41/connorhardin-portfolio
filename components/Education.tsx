@@ -82,13 +82,13 @@ export default function Education() {
                   Honors & Achievements
                 </h4>
                 {Array.isArray(edu.honors) ? (
-                  <div className="font-medium text-base text-slate-600 dark:text-slate-400 mb-3 space-y-1">
+                  <div className="font-bold text-base text-slate-600 dark:text-slate-400 mb-3 space-y-1">
                     {edu.honors.map((line, i) => (
                       <div key={i}>{line}</div>
                     ))}
                   </div>
                 ) : (
-                  <p className="font-medium text-base text-slate-600 dark:text-slate-400 mb-3">{edu.honors}</p>
+                  <p className="font-bold text-base text-slate-600 dark:text-slate-400 mb-3">{edu.honors}</p>
                 )}
                 
               </div>
