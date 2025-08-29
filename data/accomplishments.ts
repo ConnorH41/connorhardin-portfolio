@@ -14,7 +14,7 @@ export const accomplishments: Accomplishment[] = [
     title: 'U18 Curling Nationals - 2023',
     description: 'Field for 5th Annual U18 National Championship is Set.',
     date: '2023-02',
-    image: '/images/CurlingNationals2023.jpeg', 
+    image: '/images/CurlingNationals2023.png', 
     link: 'https://www.usacurling.org/press-releases/curling-5thannual-u18',
     featured: true
   },
@@ -24,14 +24,14 @@ export const accomplishments: Accomplishment[] = [
     description: 'Cape Curlers Hang Tough With One Winning A Title At US Junior Nationals.',
     date: '2021-09',
     link: 'https://www.capenews.net/falmouth/sports/cape-curlers-hang-tough-with-one-winning-a-title-at-us-junior-nationals/article_6792f9b4-c636-5b0e-af88-49ee251a6320.html',
-    image: '/images/CurlingNationals2021.jpg'
+    image: '/images/CurlingNationals2021.png'
   },
   {
     id: '3',
     title: 'U21 Curling Nationals - 2022',
     description: 'Stevens Point to Host 2022 Junior National Championships.',
     date: '2022-05',
-    image: '/images/CurlingNationals2022.jpeg',
+    image: '/images/CurlingNationals2022.png',
     link: 'https://www.usacurling.org/press-releases/stevens-point-to-host-2022-junior-national-championships'
   },
   {
@@ -40,7 +40,7 @@ export const accomplishments: Accomplishment[] = [
     description: 'Falmouth Boys Score First Win, And A Tie.',
     date: '2021-11',
     link: 'https://www.capenews.net/falmouth/sports/falmouth-boys-score-first-win-and-a-tie/article_69ae4c19-85eb-5c76-a73c-17829a09ed90.html',
-    image: '/images/FalmouthSoccer.jpg'
+    image: '/images/FalmouthSoccer.png'
   },
   {
     id: '5',
@@ -48,7 +48,7 @@ export const accomplishments: Accomplishment[] = [
     description: 'Attended the ASC International Conference 2025 in Calgary, Alberta to present a poster on TradeBind.',
     date: '2025-06',
     link: 'https://ascweb.org/about/2025-asc-conference/',
-    image: '/images/ASC2025.jpeg',
+    image: '/images/ASC2025.png',
     featured: true
   },
   {
