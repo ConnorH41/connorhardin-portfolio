@@ -9,14 +9,14 @@
   }
   body {
     @apply antialiased bg-base text-dark font-body;
-    @apply dark:bg-base-dark dark:text-dark-dark;
+    @apply dark:bg-base-dark dark:text-white;
     font-size: 1rem;
     line-height: 1.7;
     letter-spacing: 0.01em;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display font-bold text-dark;
-    @apply dark:text-dark-dark;
+    @apply dark:text-white;
     letter-spacing: -0.01em;
   }
   h1 {
@@ -30,7 +30,7 @@
   }
   p {
     @apply text-lg md:text-xl text-dark/80 mb-4 font-body;
-    @apply dark:text-dark-dark/80;
+    @apply dark:text-white/90;
   }
   a {
     @apply text-primary hover:text-secondary transition-colors duration-200 underline-offset-2 font-semibold;
@@ -45,17 +45,17 @@
 @layer components {
   .btn-primary {
     @apply bg-primary hover:bg-secondary text-base font-semibold py-3 px-7 rounded-2xl transition-all duration-200 shadow-soft hover:shadow-elegant focus:outline-none focus:ring-2 focus:ring-primary/40 focus:ring-offset-2 focus:ring-offset-base;
-    @apply dark:bg-primary-dark dark:hover:bg-secondary-dark dark:text-base-dark;
+    @apply dark:bg-primary-dark dark:hover:bg-secondary-dark dark:text-white;
     letter-spacing: 0.01em;
   }
   .btn-secondary {
     @apply bg-base hover:bg-primary/10 text-dark font-semibold py-3 px-7 rounded-2xl transition-all duration-200 shadow-soft hover:shadow-elegant focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2 focus:ring-offset-base;
-    @apply dark:bg-base-dark dark:hover:bg-primary-dark/10 dark:text-dark-dark;
+    @apply dark:bg-base-dark dark:hover:bg-primary-dark/10 dark:text-white;
     letter-spacing: 0.01em;
   }
   .card {
     @apply bg-base rounded-2xl shadow-soft hover:shadow-elegant transition-all duration-300 p-7 border border-secondary/10;
-    @apply dark:bg-base-dark dark:border-secondary-dark/20;
+    @apply dark:bg-base-dark dark:border-secondary-dark/20 dark:text-white;
   }
   .section-padding {
     @apply py-20 px-4 sm:px-8 lg:px-16;

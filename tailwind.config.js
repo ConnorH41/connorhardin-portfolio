@@ -11,23 +11,23 @@ module.exports = {
       colors: {
         base: {
           DEFAULT: '#EEEEEE',
-          dark: '#1D1616',
+          dark: '#23272a', // dark grey for dark mode background
         },
         primary: {
           DEFAULT: '#8E1616',
-          dark: '#D84040',
+          dark: '#B22234', // maroon/red accent for dark mode
         },
         secondary: {
           DEFAULT: '#D84040',
-          dark: '#8E1616',
+          dark: '#D84040', // keep a red accent for dark mode
         },
         dark: {
           DEFAULT: '#1D1616',
-          dark: '#EEEEEE',
+          dark: '#FFFFFF', // white text for dark mode
         },
         accent: {
           DEFAULT: '#D84040',
-          dark: '#8E1616',
+          dark: '#B22234',
         },
       },
       borderRadius: {
