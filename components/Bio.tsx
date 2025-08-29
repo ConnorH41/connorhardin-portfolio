@@ -31,7 +31,7 @@ export default function Bio() {
         <div className="relative">
           <div className="relative h-96 rounded-2xl overflow-hidden">
             <Image
-              src="/images/Me.png"
+              src="/images/Me.jpg"
               alt="Connor Hardin"
               fill
               className="object-cover"
