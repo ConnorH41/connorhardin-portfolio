@@ -48,9 +48,9 @@ export default function Header() {
               aria-label="Toggle theme"
             >
               {theme === 'light' ? (
-                <Moon className="h-5 w-5 text-dark/80" />
+                <Moon className="h-5 w-5 text-dark/80 dark:text-slate-100" />
               ) : (
-                <Sun className="h-5 w-5 text-primary-dark" />
+                <Sun className="h-5 w-5 text-dark/80 dark:text-dark-dark/80" />
               )}
             </button>
 

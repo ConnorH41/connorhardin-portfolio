@@ -21,15 +21,15 @@ export default function AccomplishmentCard({ accomplishment }: AccomplishmentCar
         </div>
       )}
       <div className="flex-1">
-        <h3 className="text-xl font-bold mb-2 text-dark">
+        <h3 className="text-xl font-bold mb-2 text-dark dark:text-slate-100">
           {accomplishment.title}
         </h3>
-        <p className="text-dark/70 mb-4 line-clamp-3">
+        <p className="text-dark/70 mb-4 line-clamp-3 dark:text-slate-400">
           {accomplishment.description}
         </p>
         <div className="flex items-center justify-between">
           {accomplishment.date && (
-            <div className="flex items-center text-sm text-dark/60">
+            <div className="flex items-center text-sm text-dark/60 dark:text-slate-300">
               <Calendar className="h-4 w-4 mr-2" />
               {accomplishment.date}
             </div>
@@ -39,7 +39,7 @@ export default function AccomplishmentCard({ accomplishment }: AccomplishmentCar
               href={accomplishment.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-primary hover:text-secondary transition-colors duration-200 font-semibold"
+              className="flex items-center px-4 py-2 bg-primary text-base font-semibold text-base rounded-2xl hover:bg-secondary transition-all duration-200 shadow-soft hover:shadow-elegant dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-secondary-dark"
             >
               <ExternalLink className="h-4 w-4 mr-1" />
               View

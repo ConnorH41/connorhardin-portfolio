@@ -35,7 +35,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {/* Tech Stack */}
         <div className="mb-4">
           <div className="flex items-center mb-2">
-            <Tag className="h-4 w-4 text-primary mr-2" />
+            <Tag className="h-4 w-4 text-primary mr-2 dark:text-slate-200" />
             <span className="text-sm font-medium text-dark/80">
               Tech Stack
             </span>
@@ -44,13 +44,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.techStack.slice(0, 4).map((tech) => (
               <span
                 key={tech}
-                className="px-2 py-1 text-xs bg-primary/10 text-primary font-semibold rounded-full shadow-soft"
+                className="px-2 py-1 text-xs bg-primary/10 text-primary font-semibold rounded-full shadow-soft dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-primary-800 transition-colors"
               >
                 {tech}
               </span>
             ))}
             {project.techStack.length > 4 && (
-              <span className="px-2 py-1 text-xs bg-dark/5 text-dark/60 rounded-full">
+              <span className="px-2 py-1 text-xs bg-dark/5 text-dark/60 rounded-full dark:bg-slate-700 dark:text-slate-300">
                 +{project.techStack.length - 4} more
               </span>
             )}
@@ -64,7 +64,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 bg-dark text-base text-base font-semibold text-base-DEFAULT rounded-2xl hover:bg-primary/90 hover:text-base transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant"
+              className="flex items-center justify-center px-4 py-2 bg-dark text-base text-base font-semibold text-base-DEFAULT rounded-2xl hover:bg-primary/90 hover:text-base transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-primary-800"
             >
               <Github className="h-4 w-4 mr-2" />
               Code
@@ -75,7 +75,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center px-4 py-2 bg-primary text-base font-semibold text-base rounded-2xl hover:bg-secondary transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant"
+              className="flex items-center justify-center px-4 py-2 bg-primary text-base font-semibold text-base rounded-2xl hover:bg-secondary transition-all duration-200 flex-1 shadow-soft hover:shadow-elegant dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-secondary-dark"
             >
               <ExternalLink className="h-4 w-4 mr-2" />
               Link

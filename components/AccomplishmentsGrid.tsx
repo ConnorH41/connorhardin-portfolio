@@ -81,7 +81,7 @@ export default function AccomplishmentsGrid() {
                         href={accomplishment.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 transition-colors duration-200"
+                        className="flex items-center px-4 py-2 bg-primary text-base font-semibold text-base rounded-2xl hover:bg-secondary transition-all duration-200 shadow-soft hover:shadow-elegant dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-secondary-dark"
                       >
                         <ExternalLink className="h-4 w-4 mr-1" />
                         View
