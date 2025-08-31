@@ -18,14 +18,16 @@ export default function ExperienceTimeline() {
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700"></div>
+  <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-slate-600 dark:bg-slate-400"></div>
       
       <div className="space-y-12">
         {sortedExperiences.map((experience, index) => (
           <div key={experience.id} className="relative">
             {/* Timeline Dot */}
             <div className={`absolute left-6 w-4 h-4 rounded-full border-4 border-white dark:border-slate-800 ${
-              experience.current ? 'bg-primary-600' : 'bg-slate-400 dark:bg-slate-600'
+              experience.current
+                ? 'bg-green-600 dark:bg-green-400'
+                : 'bg-slate-600 dark:bg-slate-400'
             }`}></div>
             
             {/* Content */}
