@@ -1,3 +1,5 @@
+'use client'
+
 import { getFeaturedProjects } from '@/data/projects'
 import { accomplishments } from '@/data/accomplishments'
 import ProjectCard from './ProjectCard'
@@ -28,9 +30,9 @@ export default function FeaturedProjects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredItems.map((item) => (
             item._type === 'project' ? (
-              <ProjectCard key={item.id} project={item} />
+              <ProjectCard key={item.id} project={item} showFeaturedBadge={false} />
             ) : (
-              <AccomplishmentCard key={item.id} accomplishment={item} />
+              <AccomplishmentCard key={item.id} accomplishment={item} showFeaturedBadge={false} />
             )
           ))}
         </div>

@@ -47,7 +47,12 @@ export default function AccomplishmentsGrid() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredAccomplishments.map((accomplishment) => {
             return (
-              <div key={accomplishment.id} className="card group hover:scale-105 transition-all duration-300">
+              <div key={accomplishment.id} className="card group hover:scale-105 transition-all duration-300 relative">
+                {accomplishment.featured && (
+                  <div className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full shadow-soft z-10">
+                    Featured
+                  </div>
+                )}
                 {/* Image */}
                 {accomplishment.image && (
                   <div className="relative h-48 mb-4 rounded-lg overflow-hidden">

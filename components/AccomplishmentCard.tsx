@@ -4,11 +4,17 @@ import Image from 'next/image'
 
 interface AccomplishmentCardProps {
   accomplishment: Accomplishment
+  showFeaturedBadge?: boolean
 }
 
-export default function AccomplishmentCard({ accomplishment }: AccomplishmentCardProps) {
+export default function AccomplishmentCard({ accomplishment, showFeaturedBadge = true }: AccomplishmentCardProps) {
   return (
-    <div className="card group hover:scale-[1.03] transition-transform duration-300 animate-fade-in">
+    <div className="card group hover:scale-[1.03] transition-transform duration-300 animate-fade-in relative">
+      {accomplishment.featured && showFeaturedBadge && (
+        <div className="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-2 py-1 rounded-full shadow-soft z-10">
+          Featured
+        </div>
+      )}
       {accomplishment.image && (
         <div className="relative h-48 mb-4 rounded-2xl overflow-hidden shadow-soft">
           <Image
